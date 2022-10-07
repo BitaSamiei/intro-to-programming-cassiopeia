@@ -24,7 +24,7 @@ messageForm.addEventListener('submit', function(event){
 
     const messageList = messageSection.querySelector('ul');
     const newMessage = document.createElement('li');
-    newMessage.innerHTML = `<a href="mailto:${email}">${name}</a><span> wrote: ${message}</span>`;
+    newMessage.innerHTML = `<a href="mailto:${email}">${name}</a><span> wrote: ${message} </span>`;
 
     const removeButton = document.createElement('button');
     removeButton.innerText = 'Remove';
@@ -32,10 +32,27 @@ messageForm.addEventListener('submit', function(event){
 
     removeButton.addEventListener('click', function() {
         newMessage.remove();
+
+        if (messageList.childElementCount === 0){
+            messageSection.setAttribute('style', 'display: none');
+        }
         
         });
-        
 
+    const editButton = document.createElement('button');
+    editButton.innerHTML = 'Edit'
+    editButton.setAttribute('type', 'button');
+    editButton.addEventListener('click', function(event){
+        newMessage.remove();
+        const nameElement = document.querySelector('[name = name]');
+        const emailElement = document.querySelector('[name = email]');
+        const messageElement =document.querySelector('[name = message]');
+        nameElement.value = name;
+        emailElement.value = email;
+        messageElement.value = message;
+    } )
+        
+    newMessage.appendChild(editButton);    
     newMessage.appendChild(removeButton);
     messageList.appendChild(newMessage);
     
