@@ -1,0 +1,69 @@
+body {
+    padding: 35px;
+    padding-top: 20px;
+    padding-left: 50px;
+    background-color: darkslategrey;
+}
+
+* {
+    color: snow;
+}
+
+.page-title {
+    text-align: center;
+    color: navajowhite;
+    font-family: 'Marcellus SC';
+    font-size: 50px;
+}
+
+.about,
+.experience,
+.gallery,
+#skills,
+.connect,
+.leave-message,
+.messages {
+    padding-top: 35px;
+    margin: auto;
+    color:navajowhite;
+}
+
+
+.about .li {
+    font-size: 20px;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: bold;
+    color: navajowhite;
+}
+
+h2 {
+    font-size: 25px;
+    color: snow;
+}
+
+button,
+textarea,
+input {
+    color: black;
+}
+
+label {
+    color: navajowhite;
+}
+
+.form {
+    padding-bottom: 40px;
+    padding-top: 40px;
+    margin: auto;
+}
+
+footer {
+    font-size: 16px;
+    border: white;
+    border-style: dashed;
+    width: fit-content;
+    height: 50px;
+}
