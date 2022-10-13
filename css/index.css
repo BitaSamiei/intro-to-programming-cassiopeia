@@ -1,19 +1,77 @@
 body {
+    margin: 0;
+    font-size: 20px;
+}
+
+@media screen (max-width 600px) {
+    body {
+        margin: 8px;
+    }
+}
+
+header {
+    display:block;
+    padding: 0px 0px 0px 0px;
+    margin:0;
+    
+}
+
+.container {
+    padding: 0;
+    
+}
+
+.navbar {
+    list-style-type:none;
+    padding: 30px 10px 10px 30px;
+    overflow: hidden;
+    background-color: rgb(252, 255, 48);
+}
+
+
+.list_item a {
+   display: block;
+   float: right;
+   color: black;
+   text-align: center;
+   background-color: none;
+   padding: 14px 16px;
+   text-decoration: none;
+   font-size: 20px;
+   font-weight: bold;
+}
+li a:hover {
+    background-color: rgb(204, 204, 198);
+}
+
+
+
+/*.navbar {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}*/
+
+
+
+.page-title {
+    text-align:left;
+    color: rgb(0, 0, 0);
+    font-family: 'Paytone One';
+    font-size: 40px;
+    /* 'Marcellus SC' */
+}
+
+#content {
     padding: 35px;
     padding-top: 20px;
-    padding-left: 50px;
-    background-color: darkslategrey;
+    margin:auto;
+    background-color: rgb(163, 163, 158);
 }
 
 * {
-    color: snow;
-}
-
-.page-title {
-    text-align: center;
-    color: navajowhite;
-    font-family: 'Marcellus SC';
-    font-size: 50px;
+    color: black;
 }
 
 .about,
@@ -23,35 +81,62 @@ body {
 .connect,
 .leave-message,
 .messages {
+    
     padding-top: 35px;
     margin: auto;
-    color:navajowhite;
+    color:rgb(42, 41, 39);
 }
 
-
-.about .li {
+.about {
     font-size: 20px;
+    
 }
+
 
 h1 {
+    background-color: rgba(255, 255, 0, 0.76);
+    border-radius: 5px;
+    padding: 1rem;
     font-size: 30px;
     font-weight: bold;
-    color: navajowhite;
+    color: rgb(48, 46, 46);
 }
 
-h2 {
+.job-title {
+    background-color: rgba(255, 153, 0, 0.705);
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    padding: 5px 10px 5px 10px;
     font-size: 25px;
-    color: snow;
+    color: rgb(0, 0, 0);
+
+}
+
+.experience-title {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(247, 247, 190, 0.781);
+    border-radius: 5px;
+    padding: 5PX;
+    margin-bottom: 1rem;
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+}
+.date {
+    font-size: 20px;
+    font-style: italic;
+    color: rgb(114, 114, 114);
 }
 
 button,
 textarea,
 input {
     color: black;
+    border-radius: 4px;
 }
 
 label {
-    color: navajowhite;
+    color: rgb(47, 47, 47);
 }
 
 .form {
@@ -62,8 +147,9 @@ label {
 
 footer {
     font-size: 16px;
-    border: white;
+    border: rgb(58, 58, 58);
     border-style: dashed;
-    width: fit-content;
+    margin: 0;
+    padding-left: 5px;
     height: 50px;
 }
