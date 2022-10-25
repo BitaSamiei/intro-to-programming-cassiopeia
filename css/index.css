@@ -3,7 +3,7 @@ body {
     font-size: 20px;
 }
 
-@media screen (max-width 600px) {
+@media screen and (max-width: 600px) {
     body {
         margin: 8px;
     }
