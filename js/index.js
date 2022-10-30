@@ -7,6 +7,9 @@ footer.appendChild(copyright);
 const skills = ['Basic JavaScript','Basic HTML','3Ds MAX', 'AutoCAD','V-Ray'];
 const skillSection = document.querySelector('#skills');
 const skillsList = skillSection.querySelector('ul');
+const projectSection = document.querySelector('#projects');
+const projectList = projectSection.querySelector('ul');
+
 for (let i = 0; i < skills.length; i++) {
     const skill = document.createElement('li');
     skill.innerText = skills[i];
@@ -58,3 +61,24 @@ messageForm.addEventListener('submit', function(event){
     
     messageForm.reset();
 });
+const githubRequest = new XMLHttpRequest();
+githubRequest.open( 'GET', 'https://api.github.com/users/BitaSamiei/repos');
+githubRequest.send();
+
+githubRequest.onreadystatechange = () => {
+    if (githubRequest.readyState === XMLHttpRequest.DONE && githubRequest.status == 200){
+        const repositories = JSON.parse(githubRequest.responseText);
+        for (i=0; i<repositories.length; i++){
+            let project = document.createElement('li');
+            project.innerHTML = `<a href="https://github.com/BitaSamiei?tab=repositories${repositories[i].name}">${repositories[i].name}</a>`
+            project.classList.add('projects');
+            projectList.appendChild(project);
+         }
+
+    } else if (githubRequest.readyState === XMLHttpRequest.DONE) {
+        console.log(githubRequest.status);
+
+    };
+};
+
+
