@@ -61,24 +61,26 @@ messageForm.addEventListener('submit', function(event){
     
     messageForm.reset();
 });
-const githubRequest = new XMLHttpRequest();
-githubRequest.open( 'GET', 'https://api.github.com/users/BitaSamiei/repos');
-githubRequest.send();
 
-githubRequest.onreadystatechange = () => {
-    if (githubRequest.readyState === XMLHttpRequest.DONE && githubRequest.status == 200){
-        const repositories = JSON.parse(githubRequest.responseText);
-        for (i=0; i<repositories.length; i++){
-            let project = document.createElement('li');
-            project.innerHTML = `<a href="https://github.com/BitaSamiei?tab=repositories${repositories[i].name}">${repositories[i].name}</a>`
-            project.classList.add('projects');
-            projectList.appendChild(project);
-         }
+fetch('https://api.github.com/users/BitaSamiei/repos')
+  .then((response) => response.json())
+  .then(afterRespose);
 
-    } else if (githubRequest.readyState === XMLHttpRequest.DONE) {
-        console.log(githubRequest.status);
+function afterRespose(response) {
+    for(let i=0; i < response.length; i++) {
+        const project = document.createElement('li');
+         project.innerHTML = `<a href="${response[i].html_url}">${response[i].name}</a>`;
+        const details = document.createElement('ul');
+        const description = document.createElement('li');
+        description.innerHTML = response[i].description;
+        details.appendChild(description);
 
-    };
-};
+         project.classList.add('projects');
+        projectList.appendChild(project);
+    }
+}
+
+
+
 
 
