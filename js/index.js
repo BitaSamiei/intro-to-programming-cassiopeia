@@ -4,7 +4,7 @@ const footer = document.querySelector('footer');
 const copyright = document.createElement('p');
 copyright.innerHTML = `<span>Bita Samiei Moghaddam &#169;${thisYear}</span>`;
 footer.appendChild(copyright);
-const skills = ['Basic JavaScript','Basic HTML','3Ds MAX', 'AutoCAD','V-Ray'];
+const skills = ['Basic JavaScript','Basic HTML','CSS','3Ds MAX', 'AutoCAD','Revit','V-Ray'];
 const skillSection = document.querySelector('#skills');
 const skillsList = skillSection.querySelector('ul');
 const projectSection = document.querySelector('#projects');
@@ -12,9 +12,11 @@ const projectList = projectSection.querySelector('ul');
 
 for (let i = 0; i < skills.length; i++) {
     const skill = document.createElement('li');
+    skill.classList.add('tag');
     skill.innerText = skills[i];
     skillsList.appendChild(skill);
 }
+
 messageForm = document.querySelector('[name = leave_message]');
 messageForm.addEventListener('submit', function(event){
     event.preventDefault();
