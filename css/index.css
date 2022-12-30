@@ -13,12 +13,20 @@ header {
     display:block;
     padding: 0px;
     margin: 0px;
-    
+    background: url(../images/background.webp) fixed !important;
+    background-size: 100% !important;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 430px;
 }
+
+
+header > .container{padding:0 0px;}
 
 .page-title {
     display: flex;
-    padding: 0px;
+    padding-top: 0px;
+    padding-left: 15px;
     margin: 0px;
     align-items: center;
     box-sizing: border-box;
@@ -28,6 +36,9 @@ header {
     font-size: 30px;
 }
 
+.title-name {
+    padding-top: 140px;
+}
 
 .container {
     padding: 0;
@@ -35,17 +46,22 @@ header {
 }
 
 .navbar {
+    display: flex;
+    position: fixed;
+    background-color:rgb(255, 255, 255);
+    justify-content: space-between;
     list-style-type:none;
     font-family: 'Montserrat';
-    padding: 0px;
+    padding-right: 1000px;
+    padding-left: 40px;
     margin: 0px;
-    overflow: visible;
-    background-color:  rgb(176 195 205);
+    overflow: hidden;
+    /*background-color:  rgb(176 195 205);*/
 }
 
 
 .list_item a {
-   display: block;
+   display: flex;
    float: right;
    color: black;
    text-align: center;
@@ -56,15 +72,17 @@ header {
    font-weight: bold;
 }
 li a:hover {
-    background-color: rgb(210, 224, 232);
+    background-color: rgb(223 230 253);
 }
 
 .image {
     display: inline-block;
     border-radius: 50%;
-    margin-top: 10px;
-    margin-left: 10px;
-    padding: 20px;
+    border: 8px solid;
+    border-color: #bed0fc;
+    margin-top: 150px;
+    margin-left:48px;
+    padding-right: 0px;
     width: 150px;
     height: 150px;
 }
@@ -82,6 +100,7 @@ li a:hover {
 }
 
 .about,
+.education,
 .experience,
 .gallery,
 #skills,
@@ -89,7 +108,7 @@ li a:hover {
 .leave-message,
 .messages {
 
-    padding-top: 35px;
+    padding-top: 0px;
     margin: auto;
     text-decoration: none;
     color:rgb(42, 41, 39);
@@ -116,7 +135,7 @@ li a:hover {
 
 
 h1 {
-    background-color: rgba(96, 125, 139, 0.312);
+    background-color: rgb(177 201 251);
     border-radius: 5px;
     padding: 1rem;
     font-size: 30px;
@@ -125,7 +144,7 @@ h1 {
 }
 
 .job-title {
-    background-color: rgba(96, 125, 139, 0.188);
+    background-color: rgb(223 230 253);
     border-radius: 5px;
     margin-bottom: 1rem;
     padding: 5px 10px 5px 10px;
@@ -134,10 +153,19 @@ h1 {
 
 }
 
+.education-list {
+    display: flex;
+    justify-content: space-between;
+}
+.GPA {
+    font-size: 20px;
+    font-style: italic;
+    color: rgb(96 125 139);
+}
 .experience-title {
     display: flex;
     justify-content: space-between;
-    border: 2px solid rgba(96, 125, 139, 0.188);
+    border: 2px solid rgb(223 230 253);
     border-radius: 4px;
     padding: 5px 10px 5px 10px;
     margin-bottom: 1rem;
@@ -169,10 +197,10 @@ button,
     margin: 20px;
     padding: 14px;
     border-radius: 8px;
-  --button:rgb(255, 187, 51);
-  --button-hover: rgb(255, 187, 51);
-  --button-active:  rgb(255, 187, 51);
-  --button-visited: rgb(255, 187, 51);
+  --button:rgb(254 126 117);
+  --button-hover: rgb(254 126 117);
+  --button-active:  rgb(254 126 117);
+  --button-visited: rgb(254 126 117);
   --button-colour: var(--colour-white);
   --button-border: var(--colour-white);
 }

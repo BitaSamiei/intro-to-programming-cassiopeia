@@ -4,7 +4,7 @@ const footer = document.querySelector('footer');
 const copyright = document.createElement('p');
 copyright.innerHTML = `<span>Bita Samiei Moghaddam &#169;${thisYear}</span>`;
 footer.appendChild(copyright);
-const skills = ['Basic JavaScript','Basic HTML','CSS','3Ds MAX', 'AutoCAD','Revit','V-Ray'];
+const skills = ['Basic JavaScript','Basic HTML','CSS','3Ds MAX', 'AutoCAD','V-Ray','Adobe Photoshop','Revit'];
 const skillSection = document.querySelector('#skills');
 const skillsList = skillSection.querySelector('ul');
 const projectSection = document.querySelector('#projects');
